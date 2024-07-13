@@ -1,0 +1,63 @@
+
+.services-page {
+    margin-top: 5rem;
+    padding: 20px;
+    text-align: center;
+    
+
+}
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 60vh; /* Takes up 60% of the viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f900; /* Optional: background color */
+    margin-bottom: 20px; /* Space between subtitle and cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto;
+}
+.subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #cbcbcb; /* Adjust color as needed */
+}
+.services-page h1{
+    color:  white;
+    
+}
+
+.process-overview {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.process-stage {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stage-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}

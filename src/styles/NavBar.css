@@ -1,0 +1,80 @@
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border:  0px solid;
+    padding: 10px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);;
+}
+.nav-logo{
+    position: absolute; /* Position the logo absolutely to the left */
+    left: 20px; /* Adjust as necessary */
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img{
+    transition: transform 0.2s;
+    width: 3rem;
+    margin: 5px 10px;
+}
+
+.nav-logo:hover,
+.tagline:hover,
+.stat-item:hover {
+    transform: scale(1.08);
+}
+.nav-logo,
+.tagline,
+.stat-item {
+    transition: transform 0.34s;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-items {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.333);
+    border-radius: 20px;
+    position: relative; /* Required for pseudo-elements */
+    overflow: hidden; /* Hide overflow to prevent border from showing initially */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(255, 244, 203); /* Border color */
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+.nav-items:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+.nav-items.active {
+    border: 2px solid rgb(255, 244, 203); /* Border color for active items */
+}
+
+.nav-items:hover::before {
+    left: 0; /* Slide the pseudo-element in from the left */
+}
