@@ -35,8 +35,7 @@ export default function Services(){
         { stage: 'Initial Contact', description: 'Reach out to us with your project ideas.', icon: '📞' },
         { stage: 'Requirement Analysis', description: 'We analyze and understand your requirements.', icon: '📋' },
         { stage: 'Project Management', description: 'We manage the project efficiently.', icon: '📅' },
-        { stage: 'Delivery', description: 'Delivering the project on time.', icon: '🚚' },
-        { stage: 'Post-Delivery Support', description: 'Providing support even after project completion.', icon: '🔧' }
+        { stage: 'Delivery & Support', description: 'Delivering the project on time. Providing support even after project completion', icon: '🚚' },
     ];
 
     return (
@@ -58,18 +57,7 @@ export default function Services(){
             </div>
            
             <h1>Our Process</h1>
-            <div className='process-overview'>
-                {processStages.map((stage, index) => {
-                    return (
-                        <div key={index} className='process-stage'> 
-                            <div className="stage-icon">{stage.icon}</div>
-                            <h2>{stage.stage}</h2>
-                            <p>{stage.description}</p>
-                        </div>
-                    )
-                })}
-            </div>
-            <Timeline />
+            <Timeline processStages={processStages}/>
         </div>
     )
 }
