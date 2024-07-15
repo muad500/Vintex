@@ -30,18 +30,26 @@ export default function Portfolio(){
 ]   ;
 
     return (
-    //     <div className="project-showcases">
-    //     {projectsData.map((project, index) => (
-    //         <div key={index} className="project-card">
-    //         <img src={project.image} alt={project.title} className="project-image" />
-    //         <div className="project-overlay">
-    //             <h3 className="project-title">{project.title}</h3>
-    //             <p className="project-summary">{project.summary}</p>
-    //         </div>
-    //         </div>
-    //     ))}
-    // </div>
     <>
+        <div className='container'>
+          <h1>Portfolio</h1>
+          <div className='subtitle'>
+              <p> Earum error id voluptatum! ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+          </div>
+        </div>
+        
+         <div className="project-showcases">
+         {projectsData.map((project, index) => (
+             <div key={index} className="project-card">
+             <img src={project.image} alt={project.title} className="project-image" />
+             <div className="project-overlay">
+                 <h3 className="project-title">{project.title}</h3>
+                 <p className="project-summary">{project.summary}</p>
+             </div>
+             </div>
+         ))}
+     </div>
+    
         <div className='portfolio-page'>
             <section className='intro'>
                 <h1>Showcasing Our Best Works</h1>

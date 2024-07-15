@@ -7,7 +7,7 @@
     border: 3px solid #3363ff;
     text-transform: uppercase;
     padding: 8px 16px;
-    border-radius: 3px;
+    border-radius: 20px;
     transition: all .2s ease-out;
     font-weight: 900;
     cursor: pointer;

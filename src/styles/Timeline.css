@@ -1,350 +1,153 @@
-body {
-  background-color: #000;
 
-  overflow-x: hidden;
+:root {
+	--primary-color: #000;
+	--secondary-color: #888;
 }
 
-@font-face {
-  font-family: 'ESL Legend';
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot);
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot#iefix) format("embedded-opentype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff2) format("woff2"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff) format("woff"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.ttf) format("truetype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.svg#eicon) format("svg");
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'ESL Legend';
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot);
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot#iefix) format("embedded-opentype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff2) format("woff2"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff) format("woff"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.ttf) format("truetype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.svg#eicon) format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'ESL Legend';
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot);
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot#iefix) format("embedded-opentype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff2) format("woff2"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff) format("woff"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.ttf) format("truetype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.svg#eicon) format("svg");
-  font-style: normal;
-  font-weight: bold;
+.swiper-container-wrapper--timeline .swiper-slide {
+	display: flex;
+	background: #fff;
+	min-height: 300px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
 }
 
-img {
-  max-width: 100%;
+.swiper-container-wrapper--timeline .swiper-slide .container {
+	padding: 0;
+	width: 100%;
 }
 
-.ag-format-container {
-  width: 1160px;
-  margin: 0 auto;
-
-  position: relative;
+.swiper-container-wrapper--timeline .swiper-slide .title {
+	font-size: 18px;
+	opacity: 0;
+	transition: 0.5s ease 0.5s;
 }
 
-.ag-timeline-block {
-  padding: 300px 0;
-}
-.ag-timeline_title-box {
-  padding: 0 0 30px;
-
-  text-align: center;
-}
-.ag-timeline_tagline {
-  font-size: 40px;
-  color: rgb(84, 89, 95);
-}
-.ag-timeline_title {
-  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  background-size: cover;
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-fill-color: transparent;
-  color: transparent;
-
-  font-size: 80px;
+.swiper-container-wrapper--timeline .swiper-slide-active .title {
+	opacity: 1;
 }
 
-.ag-timeline_item {
-  margin: 0 0 50px;
-
-  position: relative;
-}
-.ag-timeline_item:nth-child(2n) {
-  text-align: right;
-}
-
-.ag-timeline {
-  display: inline-block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-
-  position: relative;
-}
-.ag-timeline_line {
-  width: 2px;
-  background-color: #393935;
-
-  position: absolute;
-  top: 2px;
-  left: 50%;
-  bottom: 0;
-
-  overflow: hidden;
-
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar {
+	position: relative;
+	margin-bottom: 70px;
+	background-color: transparent;
+	height: 4px;
+	border-bottom: 1px solid var(--secondary-color);
+	width: 75%;
 }
 
-.ag-timeline_line-progress {
-  width: 100%;
-  height: 20%;
-  background-color: #FF0;
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar-fill {
+	background-color: var(--primary-color);
+	height: 3px;
+	top: 2px;
 }
 
-.ag-timeline-card_box {
-  padding: 0 0 20px 50%;
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
-  padding: 0 50% 20px 0;
-}
-.ag-timeline-card_point-box {
-  display: inline-block;
-  margin: 0 14px 0 -28px;
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-  margin: 0 -28px 0 14px;
-}
-.ag-timeline-card_point {
-  height: 50px;
-  line-height: 50px;
-  width: 50px;
-  border: 3px solid #FF0;
-  background-color: #1d1d1b;
-
-  text-align: center;
-  font-family: 'ESL Legend', sans-serif;
-  font-size: 20px;
-  color: #FFF;
-
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.js-ag-active .ag-timeline-card_point {
-  color: #1d1d1b;
-  background-color: #FF0;
-}
-.ag-timeline-card_meta-box {
-  display: inline-block;
-}
-.ag-timeline-card_meta {
-  margin: 10px 0 0;
-
-  font-family: 'ESL Legend', sans-serif;
-  font-weight: bold;
-  font-size: 28px;
-  color: #FF0;
-}
-.ag-timeline-card_item {
-  display: inline-block;
-  width: 75%;
-  margin: -77px 0 0;
-  background-color: #282828;
-
-  opacity: 0;
-
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-
-  -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-  -moz-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-  -o-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-  box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-
-  -webkit-transition: -webkit-transform .5s, opacity .5s;
-  -moz-transition: -moz-transform .5s, opacity .5s;
-  -o-transition: -o-transform .5s, opacity .5s;
-  transition: transform .5s, opacity .5s;
-
-  position: relative;
-}
-.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
-  -webkit-transform: translateX(-200%);
-  -moz-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
-  -o-transform: translateX(-200%);
-  transform: translateX(-200%);
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%);
-}
-.js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-.js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-  opacity: 1;
-
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-}
-.ag-timeline-card_arrow {
-  height: 18px;
-  width: 18px;
-  margin-top: 20px;
-  background-color: #282828;
-
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
-  margin-left: calc(-18px / 2);
-  margin-right: calc(-18px / 2);
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_arrow {
-  margin-left: -10px;
-
-  right: auto;
-  left: 0;
-}
-.ag-timeline-card_img {
-  width: 100%;
-}
-.ag-timeline-card_info {
-  padding: 20px 30px;
-}
-.ag-timeline-card_title {
-  display: none;
-  margin: 10px 0 0;
-
-  font-family: 'ESL Legend', sans-serif;
-  font-weight: bold;
-  font-size: 28px;
-  color: #FF0;
-}
-.ag-timeline-card_desc {
-  line-height: 1.45;
-
-  font-size: 16px;
-  color: #FFF;
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
+	position: absolute;
+	top: 2px;
+	left: -100%;
+	width: 100%;
+	height: 3px;
+	background-color: var(--primary-color);
+	content: "";
 }
 
-
-@media only screen and (max-width: 979px) {
-  .ag-timeline_line {
-    left: 30px;
-  }
-
-  .ag-timeline_item:nth-child(2n) {
-    text-align: left;
-  }
-
-  .ag-timeline-card_box,
-  .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
-    padding: 0 0 20px;
-  }
-  .ag-timeline-card_meta-box {
-    display: none;
-  }
-  .ag-timeline-card_point-box,
-  .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-    margin: 0 0 0 8px;
-  }
-  .ag-timeline-card_point {
-    height: 40px;
-    line-height: 40px;
-    width: 40px;
-  }
-  .ag-timeline-card_item {
-    width: auto;
-    margin: -65px 0 0 75px
-  }
-  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-  .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-    -webkit-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -o-transform: translateX(200%);
-    transform: translateX(200%);
-  }
-  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
-    right: auto;
-    left: 0;
-  }
-  .ag-timeline-card_title {
-    display: block;
-  }
-  .ag-timeline-card_arrow {
-    margin-top: 12px;
-  }
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
+	position: absolute;
+	top: 3px;
+	right: -100%;
+	width: 100%;
+	height: 1px;
+	background-color: var(--secondary-color);
+	content: "";
 }
 
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
-
-  .ag-timeline-card_img {
-    height: auto;
-    width: auto;
-  }
+.swiper-container-wrapper--timeline .swiper-pagination-custom {
+	position: relative;
+	list-style: none;
+	margin: 1rem 0;
+	padding: 0;
+	display: flex;
+	line-height: 1.66;
+	bottom: 0;
+	z-index: 11;
+	width: 75%;
 }
 
-@media only screen and (max-width: 639px) {
-  .ag-timeline_title {
-    font-size: 60px;
-  }
-
-  .ag-timeline-card_info {
-    padding: 10px 15px;
-  }
-  .ag-timeline-card_desc {
-    font-size: 14px;
-  }
+.swiper-container-wrapper--timeline
+	.swiper-pagination-custom
+	.swiper-pagination-switch {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	display: block;
 }
 
-@media only screen and (max-width: 479px) {
-
+.swiper-container-wrapper--timeline
+	.swiper-pagination-custom
+	.swiper-pagination-switch
+	.switch-title {
+	position: absolute;
+	font-weight: 400;
+	right: 0;
+	transform: translateX(50%);
+	transition: 0.2s all ease-in-out;
+	transition-delay: 0s;
+	cursor: pointer;
+	z-index: 1;
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-  .ag-format-container {
-    width: 750px;
-  }
-
+.swiper-container-wrapper--timeline
+	.swiper-pagination-custom
+	.swiper-pagination-switch
+	.switch-title:after {
+	position: absolute;
+	top: calc(100% + 19px);
+	right: 50%;
+	transform: translateX(50%) translateY(-50%);
+	width: 12px;
+	height: 12px;
+	background: var(--primary-color);
+	border-radius: 2rem;
+	content: "";
+	transition: 0.2s all ease-in-out;
+	transition-delay: 0s;
+	z-index: 1;
 }
 
-@media (min-width: 980px) and (max-width: 1161px) {
-  .ag-format-container {
-    width: 960px;
-  }
+.swiper-container-wrapper--timeline
+	.swiper-pagination-custom
+	.swiper-pagination-switch.active
+	.switch-title {
+	font-weight: 400;
+	transition-delay: 0.4s;
+}
 
+.swiper-container-wrapper--timeline
+	.swiper-pagination-custom
+	.swiper-pagination-switch.active
+	.switch-title:after {
+	background: var(--primary-color);
+	width: 25px;
+	height: 25px;
+	transition-delay: 0.4s;
+}
+
+.swiper-container-wrapper--timeline
+	.swiper-pagination-custom
+	.swiper-pagination-switch.active
+	~ .swiper-pagination-switch
+	.switch-title {
+	color: var(--secondary-color);
+	font-weight: 16px;
+}
+
+.swiper-container-wrapper--timeline
+	.swiper-pagination-custom
+	.swiper-pagination-switch.active
+	~ .swiper-pagination-switch
+	.switch-title:after {
+	background: var(--secondary-color);
 }

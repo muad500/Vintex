@@ -1,3 +1,21 @@
+.container{
+  height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fdfdfd00; /* Optional: background color */
+    margin-bottom: 20px; /* Space between subtitle and cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto;
+}
+
+.container h1{
+  font-size:80px;
+  color: aliceblue;
+}
 .project-showcases {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

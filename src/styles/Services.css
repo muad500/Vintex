@@ -1,15 +1,12 @@
 
 .services-page {
-    margin-top: 5rem;
-    padding: 20px;
+   /*margin-top: 5rem;
+    padding: 20px;*/
     text-align: center;
-    
-
 }
 .services-container {
-    width: 100%;
-    max-width: 1200px;
-    height: 60vh; /* Takes up 60% of the viewport height */
+    height: 100vh;
+    width: 100vw;
     padding: 20px;
     box-sizing: border-box;
     background-color: #f9f9f900; /* Optional: background color */
@@ -27,7 +24,7 @@
 }
 .services-page h1{
     color:  white;
-    
+    font-size: 80px;
 }
 
 .process-overview {

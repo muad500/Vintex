@@ -10,7 +10,7 @@
     z-index: 1000;
     border:  0px solid;
     padding: 10px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);;
+   /* box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);;*/
 }
 .nav-logo{
     position: absolute; /* Position the logo absolutely to the left */
@@ -45,7 +45,7 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 10px 15px;
-    border: 2px solid rgba(255, 255, 255, 0.333);
+    border: 0px solid rgba(255, 255, 255, 0.333);
     border-radius: 20px;
     position: relative; /* Required for pseudo-elements */
     overflow: hidden; /* Hide overflow to prevent border from showing initially */
@@ -72,7 +72,9 @@
     color: #fff; /* Change text color on hover */
 }
 .nav-items.active {
-    border: 2px solid rgb(255, 244, 203); /* Border color for active items */
+    background-color: rgba(255, 255, 255, 0.583);
+    color: rgb(21, 21, 21);
+
 }
 
 .nav-items:hover::before {
