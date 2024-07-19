@@ -3,7 +3,10 @@ import '../styles/Timeline.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-const TimelineSwiper = ({processStages}) => {
+import React, { useEffect, useRef } from 'react';
+import Swiper from 'swiper';
+
+const TimelineSwiper = ({ processStages }) => {
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -59,25 +62,23 @@ const TimelineSwiper = ({processStages}) => {
     <div className="container">
       <div className="swiper-container-wrapper swiper-container-wrapper--timeline">
         <ul className="swiper-pagination-custom">
-            {processStages.map((stage, index) => {
-                return (
-          <li key={index} className="swiper-pagination-switch first active"><span className="switch-title">{stage.stage}</span></li>
-                )
-            })}
+          {processStages.map((stage, index) => (
+            <li key={index} className={`swiper-pagination-switch ${index === 0 ? 'first active' : ''}`}>
+              <span className="switch-title">{stage.stage}</span>
+            </li>
+          ))}
         </ul>
         <div className="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"></div>
         <div className="swiper swiper-container swiper-container--timeline">
           <div className="swiper-wrapper">
-            {processStages.map((stage, index) => {
-                return (
-            <div key={index} className="swiper-slide swiper-box">
-                    <div className='swiper-parent-box'>
-                      <img src="https://picsum.photos/1000/700" alt={stage.stage} className='process-image'/>
-                      <div className='title process-title'>{stage.description}</div>
-                      </div>
+            {processStages.map((stage, index) => (
+              <div key={index} className="swiper-slide swiper-box">
+                <div className="swiper-parent-box">
+                  <img src="https://picsum.photos/1000/700" alt={stage.stage} className="process-image" />
+                  <div className="title process-title">{stage.description}</div>
                 </div>
-                )
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -86,3 +87,4 @@ const TimelineSwiper = ({processStages}) => {
 };
 
 export default TimelineSwiper;
+
