@@ -1,4 +1,4 @@
-import "../styles/Card.css"
+import "../styles/Components/Card.module.css"
 import Button from "./Button"
 
 export default function Card({ image, thumb, title, description}){

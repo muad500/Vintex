@@ -1,10 +1,8 @@
-import { useEffect, useRef } from 'react';
-import '../styles/Timeline.css';
+import '../styles/Components/Timeline.module.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 import React, { useEffect, useRef } from 'react';
-import Swiper from 'swiper';
 
 const TimelineSwiper = ({ processStages }) => {
   const swiperRef = useRef(null);

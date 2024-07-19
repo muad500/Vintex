@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "../styles/NavBar.css"
-import "../styles/LangButtons.css"
+import "../styles/Components/LangButtons.module.css"
 import Logo from "../assets/Vintex.svg"
 export default function NavBar(){
     return (
